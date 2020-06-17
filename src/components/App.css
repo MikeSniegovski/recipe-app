@@ -1,0 +1,184 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #cccccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 1em;
+}
+
+.scrolbar {
+  scrollbar-color: #666 transparent;
+  scrollbar-width: 1rem;
+}
+
+.scrolbar::-webkit-scrollbar {
+  width: 0.5rem;
+  background: none transparent;
+
+}
+
+.scrolbar::-webkit-scrollbar-track {
+  background: none transparent;
+}
+
+.scrolbar::-webkit-button {
+  background: none transparent;
+}
+
+.scrolbar::-webkit-button-piece {
+  background: none transparent;
+}
+
+.scrolbar::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 1rem;
+}
+
+.scrolbar::-webkit-scrollbar-button {
+  display: none;
+  background: none transparent;
+}
+
+.App {
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "header login details details details"
+    "search add details details details"
+    "list list details details details"
+}
+
+.app-name {
+  grid-area: header;
+  font-size: 3rem;
+  padding: 2rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.c-account {
+  grid-area: login;
+  padding: 2rem;
+}
+
+.c-search {
+  grid-area: search;
+  padding: 2rem;
+
+}
+
+.c-button {
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  padding: 0.5em 1em;
+  background: none #fff;
+  border: 1px dotted #666;
+  cursor: pointer;
+  width: 100%;
+
+}
+
+.c-input {
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  padding: 0.5em 1em;
+  background: none transparent;
+  border: 1px dotted #666;
+  cursor: text;
+  width: 100%;
+}
+
+.c-input:hover {
+  border: 1px solid #666;
+}
+
+.c-button:hover {
+  border: 1px solid #666;
+}
+
+.add-recipe {
+  grid-area: add;
+  padding: 2rem;
+  text-align: right;
+}
+
+.c-list {
+  margin-bottom: 1em;
+  list-style-position: inside;
+}
+
+.c-list__recipes {
+  grid-area: list;
+  padding: 2rem;
+  list-style: none;
+  overflow-y: scroll;
+}
+
+.c-list__item {
+  padding: 1em;
+  border-bottom: 1px dotted #666;
+  cursor: pointer;
+}
+
+.c-list__item:hover {
+  border-bottom: 1px solid #333;
+}
+
+.c-list__item--selected {
+  border-bottom: 1px solid #000;
+  color: #000;
+}
+
+.c-recipe {
+  grid-area: details;
+  padding: 2rem;
+  overflow-y: scroll;
+}
+
+.c-recipe--empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.c-steps form,
+.c-ingridients form{
+  display: flex;
+}
+
+.btn-add{
+display: inline-block;
+width: auto;
+}
+
+.c-comments{
+}
